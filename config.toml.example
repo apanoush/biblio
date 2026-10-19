@@ -1,0 +1,29 @@
+# Example biblio configuration.
+#
+# This file can live in two places, both of which are optional and merged:
+#   * user-global: $XDG_CONFIG_HOME/biblio/config.toml (or ~/.config/biblio/config.toml)
+#   * project:     config.toml, found by walking up from the current directory
+# A file only needs to set the keys it wants to change. Copy this template to
+# one of those locations and edit it, or generate it with
+# `biblio config --init` (project) / `biblio config --init --global`.
+# `papers_root` and `db_path` support `~` and `$VAR` / `${VAR}` expansion
+# (from the environment).
+#
+# Every value can also be overridden by environment variables (see README) or
+# command-line flags. `biblio config` prints the resolved configuration.
+# Relative paths are relative to the current working directory.
+
+# Root of the paper tree. READ-ONLY: biblio never writes here.
+papers_root = "$HOME/papers"
+
+# SQLite database file.
+db_path = "data/biblio.db"
+
+# File extensions to consider (without the dot, lowercase).
+include_extensions = ["pdf", "html", "htm"]
+
+# Files passed to a single exiftool invocation.
+batch_size = 100
+
+# Compute a SHA-256 content hash per file (slower, useful for dedup).
+hash_contents = false

@@ -1,0 +1,18 @@
+/target
+
+# Reference checklist symlinked from a local path; not part of the project.
+/rust_db_guidelines-concise.md
+
+# Local configuration may contain machine-specific paths.
+/config.toml
+
+# Generated database and exports.
+/data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+old
+infos.md
+doc/decisions
